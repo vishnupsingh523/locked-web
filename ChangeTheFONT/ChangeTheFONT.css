@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.top{
+    margin-top: 40px;
+}
+#enter{
+    border-radius: 20px;
+    font-size: 20px;
+    border: none;
+    background-color: rgba(207, 203, 203, 0.774);
+    padding: 15px 20px;
+}
+#name{
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+.changes{
+    text-align: left;
+    margin: 0 38%;
+    background-color: rgb(252, 235, 0);
+    padding: 20px;
+    border-radius: 40px;
+    box-sizing: border-box;
+    display: grid;
+
+}
+#size, #weight{
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(255, 241, 110);
+    color: black;
+    font-family: cursive;
+
+}
+select{
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgb(255, 241, 110);
+    padding: 10px 10px;
+}
+button{
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: none;
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 10px;
+    font-family: cursive;
+}
