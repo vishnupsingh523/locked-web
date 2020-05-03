@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Color</title>
+    <link rel="stylesheet" href="sample1.css">
+</head>
+<body>
+
+    <div class="top">
+        
+        <input id="enter" type="text" placeholder="Enter Your name here">
+        <button onclick="show()">Click Me</button>
+
+    </div>
+    
+    <p id="name"></p>
+
+    <div class="changes">
+
+        <input id="size" type="text" placeholder="e.g. 30px">
+    <button onclick="changefontsize()">Font Size</button>
+    <br><br>
+
+    <input id="weight" type="number" placeholder="e.g. 900">
+    <button onclick="changefontweight()">Font Weight</button>
+    <br><br>
+
+    <select name="colours" id="colours">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="black">Black</option>
+
+    </select>
+    <button onclick="changecolor()">Color</button>
+    </div>
+    
+    <script>
+
+        function show(){
+            var enter = document.getElementById("enter").value;
+            document.getElementById("name").innerHTML = enter;
+        }
+
+        function changefontsize(){
+            var size= document.getElementById("size").value;
+            document.getElementById("name").style.fontSize= size;
+        }
+
+        function changefontweight(){
+            var weight= document.getElementById("weight").value;
+            document.getElementById("name").style.fontWeight= weight;
+        }
+
+        function changecolor(){
+            var colorname = document.getElementById("colours").value;
+            document.getElementById("name").style.color= colorname;
+            
+        }
+    </script>
+</body>
+</html>
