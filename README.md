@@ -5,5 +5,7 @@ This repository consists of some sample codes related to any website and this is
 <li>Small projects using HTML, CSS and java script</li>
 
 <h2>Concepts learnt form:<h2>
-Udemy: https://www.udemy.com/course/javascript-bootstrap-php-certification-for-beginners/
-Youtube: Telusko Learnings and Simple snippets
+  <p>Udemy: https://www.udemy.com/course/javascript-bootstrap-php-certification-for-beginners/
+    <br>
+    Youtube: Telusko Learnings and Simple snippets
+  </p>
