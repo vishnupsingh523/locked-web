@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML</title>
+</head>
+<body>
+
+    <p id="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente optio ipsam eos aperiam alias rerum soluta nulla quod ut? Adipisci omnis cumque id perferendis ad tenetur veritatis ratione optio aperiam.</p>
+    <br><br>
+    <textarea id="newtext" cols="30" rows="5" placeholder="Enter the new text here"></textarea>
+    <br>
+    <button onclick="changethetext()">Click Me</button>
+    <script type="text/javascript">
+    
+    // Hello this is the single line comment.
+    // this kind of commnet is only applicable upto a single line
+    // and for the next line you have to use again the double forward slash
+
+        function changethetext(){
+            newtext= document.getElementById('newtext').value;
+            document.getElementById('text').innerText = newtext;
+        }
+
+    /* This is the multi line comment in the Java Script which is used here.
+    function addthem(){
+        var num1 = document.getElementById('num1').value;
+        var num2 = document.getElementById('num2').value;
+        document.getElementById('math').innerHTML = num1+num2;
+    }
+    */
+    </script>
+</body>
+</html>
