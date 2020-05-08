@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+
+    <p>This is the addition of numerical value and the string: </p>
+    <br>
+    <input id="num" type="number" placeholder="Enter number">
+    <input id="str" type="text" placeholder="Enter String">
+    <button onclick="result()">Click Me</button>
+    
+    <script type="text/javascript">
+        function result(){
+            var number1= document.getElementById("num").value;
+            var string1 = document.getElementById("str").value;
+            document.write(number1 + string1);
+        }
+        
+        
+    </script>
+</body>
+</html>
