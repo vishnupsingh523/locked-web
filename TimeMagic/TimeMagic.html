@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIMING FUNCTIONS</title>
+    <style>
+        div{
+            background-color: rgb(255, 240, 105);
+            padding: 50px;
+            margin: 50px 200px;
+            font-size: 30px;
+            color: #fff;
+            font-family: fantasy;
+            border-radius: 10%;
+            text-align: center;
+            border: 2px dashed black;
+            box-shadow: 5px 5px 10px rgb(255, 233, 105);
+        }
+        span{
+            letter-spacing: 5px;
+        }
+        button{
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="start()">
+        Start
+    </button>
+    <div id="clr">THE MAGIC BEGINS NOW <span>...</span></div>
+    <button onclick="end()">End</button>
+
+    <script>
+        var ID = 0;
+        var i=0;
+        var increase=['green','yello','red','grey','blue','orange'];
+        function getcolor(){
+                document.getElementById("clr").style.backgroundColor = increase[i];
+        }
+        function changecolor(){
+            
+            window.setTimeout(getcolor(i),500);
+            i=i+1;
+            document.getElementById("clr").innerHTML = "The is color is changed when 5 seconds have been passed......"
+        }
+
+        // function start()
+        // {
+        //     ID = window.setTimeout(changecolor, 5000);
+        // }
+        // function end()
+        // {
+        //     window.clearTimeout(ID);
+        // }
+
+        function start()
+        {
+            ID = window.setInterval(changecolor, 500);
+        }
+        function end()
+        {
+            window.clearTimeout(ID);
+            i=0;
+        }
+    </script>
+</body>
+</html>
