@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        h1{
+            text-align: center;
+            font-size: 60px;
+        }
+        p{
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .time{
+            text-align: center;
+        }
+        button{
+            padding: 10px 20px;
+            border-radius: 40%;
+            border: none;
+            font-size: 40px;
+            font-family: cursive;
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Stopwatch</h1>
+    
+    <div class="time">
+        <button id="start" onclick="startTime()">Start</button>
+        <p id="hours">00:00:00:00</p>
+        <button id="record" onclick="printTime()">Record</button>
+        <button id="stop" onclick="stopTime()">Stop</button>
+    </div>
+    
+    
+    <script>
+        var hours=0;
+        var minute=0;
+        var second=0;
+        var milisec=0;
+
+        function startTime(){
+           getit= window.setInterval(mili,10);
+           se=window.setInterval(sec,1000);
+           mi=window.setInterval(min,100000);
+           hr=window.setInterval(hrs,10000000);
+        }
+        function mili(){
+
+            if(milisec<99)
+            {
+                milisec++;
+                document.getElementById('hours').innerHTML = `${hours}:${minute}:${second}:${milisec}`;
+            }
+            else{
+                document.getElementById('hours').innerHTML = "00";
+                milisec=0;
+            }
+            
+        }
+
+        function sec(){
+            if(second<99)
+            {
+                second++;
+                document.getElementById('hours').innerHTML = `${hours}:${minute}:${second}:${milisec}`;
+            }
+            else{
+                document.getElementById('hours').innerHTML = "00";
+                second=0;
+            }
+        }
+        function min(){
+            if(minute<99)
+            {
+                minute++;
+                document.getElementById('hours').innerHTML = `${hours}:${minute}:${second}:${milisec}`;
+            }
+            else{
+                document.getElementById('hours').innerHTML = "00";
+                minute=0;
+            }
+        }
+        function hrs(){
+            if(hours<99)
+            {
+                hours++;
+                document.getElementById('hours').innerHTML = `${hours}:${minute}:${second}:${milisec}`;
+            }
+            else{
+                document.getElementById('hours').innerHTML = "00";
+                hours=0;
+            }
+        }
+        function stopTime(){
+            window.clearInterval(getit);
+            window.clearInterval(se);
+            window.clearInterval(mi);
+            window.clearInterval(hr);
+        }
+
+        function printTime(){
+            document.createAttribute('p').innerHTML = "hello";
+        }
+
+   </script>
+</body>
+</html>
