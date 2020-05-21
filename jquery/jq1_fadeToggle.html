@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq1_fadeToggle</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        .name{
+            margin: 100px 0 ;
+            height: 200px;
+            font-size: 80px;
+            color: black;
+            text-align: center;
+        }
+        #name{
+            background-color: rgb(252, 194, 4);
+        }
+        button{
+            font-size: 40px;
+            text-transform: capitalize;
+            border: none;
+            border-radius: 20px;
+            padding: 15px 30px;
+            background-color:rgba(163, 163, 163, 0.719);
+            box-shadow: 10px 10px 10px black;
+            cursor: pointer;
+        }
+        button:hover{
+            box-shadow: 8px 8px 8px black;
+            background-color: rgba(206, 206, 206, 0.856);
+        }
+    </style>
+</head>
+<body>
+    <div class="name">
+        <h2 id="name">Vishwanath P Singh</h2>
+    </div>
+    
+    <button onclick="fadeItNow()">click me</button>
+
+
+    <script src="jquery.js"></script>
+    <script>
+        function fadeItNow(){
+        $("#name").fadeToggle();
+        }
+    </script>
+</body>
+</html>
