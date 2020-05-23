@@ -15,7 +15,7 @@
             display: grid;
             grid-template-columns: auto auto;
             justify-content: space-evenly;
-            margin-top: 200px;
+            margin-top: 50px;
             margin-bottom: 336px;
         }
 
@@ -29,17 +29,91 @@
             
         }
 
+        #design{
+            display: flex;
+            height: 260px;
+        }
+        .pack .top{
+            height: 100px;
+            background-color: white;
+            width: 2px;
+            margin: auto;
+            
+        }
+        .pack .bottom{
+            height: 80px;
+            width: 80px;
+            border-radius: 100%;
+            background-color: greenyellow;
+            margin: auto;
+            box-shadow: 10px 10px 100px 10px white;
+        }
+        .pack{
+            width: 100px;
+            margin: 0 6%;
+        }
+
+        #pack1{
+            background-image: linear-gradient(red, black);
+        }
+        #pack2{
+            background-image: linear-gradient(rgb(0, 255, 213), rgb(25, 0, 255));
+        }
+        #pack3{
+            background-image: linear-gradient(rgb(255, 115, 0), rgb(209, 255, 2));
+        }
+        #pack4{
+            background-image: linear-gradient(greenyellow, rgb(248, 28, 248));
+        }
+
+        #top1{
+            height: 140px;
+        }
+        #top2{
+            height: 180px;
+        }
     </style>
 </head>
 <body>
     
+    <div id="design">
+        <div  class="pack ">
+            <div  class="top"></div>
+            <div id="pack1" class="bottom"></div>
+        </div>
+        <div class="pack ">
+            <div id="top1" class="top"></div>
+            <div id="pack2" class="bottom"></div>
+        </div>
+        <div class="pack ">
+            <div id="top2" class="top"></div>
+            <div id="pack3" class="bottom"></div>
+        </div>
+        <div class="pack ">
+            <div id="top1" class="top"></div>
+            <div id="pack2" class="bottom"></div>
+        </div>
+        <div class="pack ">
+            <div id="top3" class="top"></div>
+            <div id="pack4" class="bottom"></div>
+        </div>
+    </div>
+
     <div class="all">
         <a href="../ChangeTheFont/ChangeTheFONT.html">Change The Font</a>
         <a href="../JavaScript Implementation/implement.html">JavaScript Implementation</a>
         <a href="../TimeMagic/TimeMagic.html">Time Magic</a>
         <a href="../stopwatch/basic_stopwatch.html">Stopwatch</a>
         <a href="../jquery/jq1_fadeToggle.html">Fade IN and OUT</a>
-
     </div>
+
+    <script src="../jquery.js"></script>
+    <script>
+        $(".pack").hide();
+        $(".pack").slideDown(4000);
+
+
+
+    </script>
 </body>
 </html>
