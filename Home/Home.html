@@ -109,11 +109,13 @@
 
     <script src="../jquery/jquery.js"></script>
     <script>
-        $(".pack").hide();
-        $(".pack").slideDown(5000);
+        //here setInterval is used to repeat the function for infite times 
+        setInterval(repeatIt, 0);
 
-
-
+        function repeatIt(){
+            $(".top").slideUp(1800);
+            $(".top").slideDown(3000);
+        }
     </script>
 </body>
 </html>
