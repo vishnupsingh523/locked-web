@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js3_click</title>
+
+    <style>
+        .name{
+            font-size: 30px;
+            color: red;
+            text-align: center;
+            border: 2px dashed black;
+            padding: 20px 0;
+        }
+
+        .myName{
+            font-size: 40px;
+            color: white;
+            background-color: rgba(113, 114, 114, 0.486);
+            text-align: center;
+            padding: 20px 40px;
+            border: 2px solid red;
+        }
+
+        button{
+            border-radius: 30px;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 0 0 0 45%;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 class="name">Vishwanath Pratap Singh</h1>
+    <button>Click Me</button>
+    <script src="jquery.js"></script>
+    <script>
+        // here when we will use the click() .... while clicking the tag or the id or the class
+        // then it will do the functioning according to the its body
+        $("button").click(function(){
+            $("h1").hide(2000,function(){
+                document.getElementsByClassName("name").innerHTML = "Here is I am HIDING.";
+                $("h1").css("color","#f0f00f");
+
+                $("h1").removeClass("name");
+                $("h1").addClass("myName");
+            });
+
+            
+            // document.getElementById("name").innerHTML = "done here";
+            // document.getElementById("name").style.backgroundColor ="#ff0000";
+            $("h1").show(2000,()=>{
+                $("button").before("<h2>Hiii Here I am.");
+                $("button").after("<h2>This is adorable.");
+            });
+            
+        });
+
+    </script>
+</body>
+</html>
