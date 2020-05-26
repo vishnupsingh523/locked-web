@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sounds</title>
+</head>
+<body>
+    
+    <div id="doit" style="text-align: center;">
+        <img src="images/a.jpg">
+        <img src="images/s.png">
+        <img src="images/d.jpg">
+        <img src="images/f.png">
+        <img src="images/g.jpg">
+        
+    </div>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $("img").click(function(){
+                $(this).css({
+                    "border":"2px dashed black",
+                    "border-radius":"40px",
+                    "margin":"20px",
+                    "box-shadow":"5px 5px 50px grey"
+                });
+            });
+            
+        });
+
+    </script>
+</body>
+</html>
